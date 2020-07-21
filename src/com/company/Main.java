@@ -27,7 +27,7 @@ public class Main {
 
         }*/
 
-        System.out.println("Introduce cinco numeros");
+       /* System.out.println("Introduce cinco numeros");
         int[] Numeros = new int[5];
         int cont = 0, num;
 
@@ -49,13 +49,39 @@ public class Main {
 
 
         } while (cont < 5);
-        for (int i = 4; i <= 0; i++) {
+        for (int i = 4; i >= 0; i--) {
             System.out.println(Numeros[i] + ",");
 
 
         }
 
+    }*/
+
+
+        int[] numeros = new int[20];
+        int contador=0,suma=0,num;
+
+        for (int i = 0; i < 20; i++) {
+
+            if(suma>100){
+                numeros[i]=0;
+            }else {
+                System.out.println("introduce un numero");
+                num=leer.nextInt();
+                leer.nextLine();
+                suma+=num;
+                numeros[i]=num;
+
+            }
+        }
+
+
+        for (int i = 0; i <20; i++) {
+            System.out.println(numeros[i]+",");
+        }
+        System.out.println("");
+
+
+
     }
-
-
 }
