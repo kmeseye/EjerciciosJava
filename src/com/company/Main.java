@@ -133,8 +133,8 @@ public class Main {
         media = media / 10;
 
         for (int i = 0; i <temperaturas.length ; i++) {
-            if(convertirEntero(temperaturas[i][1])<media{
-                System.out.println("ciudad"+temperaturas[i][0]);
+            if(convertirEntero(temperaturas[i][1])<media){
+                System.out.println("Ciudad: "+temperaturas[i][0]+", temperatura: "+temperaturas[i][1]);
             }
 
         }
