@@ -2,6 +2,9 @@ package com.company;
 
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -56,7 +59,7 @@ public class Main {
         }
 
     }*/
-
+/*
 
         int[] numeros = new int[20];
         int contador=0,suma=0,num;
@@ -81,7 +84,65 @@ public class Main {
         }
         System.out.println("");
 
+*/
+/*
+        int[] loteria = new int[6];
+        int contador = 0;
+        do {
+
+            Random rd = new Random();
+            Integer numero = rd.nextInt(50);
 
 
+            if (!comprobarArray(numero, loteria)) {
+                loteria[contador] = numero;
+                contador++;
+            }
+
+        } while (contador < 6);
+        for (int i = 0; i < loteria.length; i++) {
+            System.out.println(loteria[i] + ",");
+        }
+        System.out.println("");
+    }
+
+    private static boolean comprobarArray(Integer numero, int[] loteria) {
+        for (int i = 0; i < loteria.length; i++) {
+            if (loteria[i]==numero) return true;
+
+        }
+
+        return false;
+        */
+
+        String[][] temperaturas = new String[10][2];
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Nombre de Ciudad");
+            String ciudad = leer.nextLine();
+            System.out.println("Temperatura");
+            String temperatura = leer.nextLine();
+            temperaturas[1][0] = ciudad;
+            temperaturas[i][1] = temperatura;
+
+        }
+        double media = 0.0;
+        for (int i = 0; i < temperaturas.length; i++) {
+            media += convertirEntero(temperaturas[i][1]);
+
+        }
+        media = media / 10;
+
+        for (int i = 0; i <temperaturas.length ; i++) {
+            if(convertirEntero(temperaturas[i][1])<media{
+                System.out.println("ciudad"+temperaturas[i][0]);
+            }
+
+        }
+    }
+
+
+
+    public static int convertirEntero(String valor) {
+        return Integer.parseInt(valor);
     }
 }
